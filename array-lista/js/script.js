@@ -7,7 +7,7 @@
 // 1. creare l'array con la frutta del frigorifero
 // 2. aggiungere la pesca all'array della frutta
 // 3. verificare se nell'array di frutta c'è il cocomero:
-//    - se c'è stampiamo: "Trovato! Devo solo preparare il cocktail."
+//    - se c'è stampiamo: 
 //    - se non lo trovo: "Oh no, devo uscire a comprare il cocomero!"
 
 const frigo = [
@@ -17,3 +17,17 @@ console.log (frigo);
 
 frigo.push ('pesca');
 console.log (frigo);
+
+let presente;
+for (i=0; i < frigo.length; i++){
+    if(frigo [i] = 'cocomero') {
+        presente = true;
+    } else {
+        presente = false;
+    }
+}
+if (presente) {
+    console.log ("Trovato! Devo solo preparare il cocktail.")
+} else {
+    console.log ("Oh no, devo uscire a comprare il cocomero!")
+}

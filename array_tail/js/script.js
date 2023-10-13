@@ -28,7 +28,16 @@ btn.addEventListener('click', function(){
     }
     console.log (array);
 
-    let printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
+    let printArray5;
+    if (array.length <= 5){
+        printArray5 = array;
+    } else {
+        printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
+    }
+    
     console.log (printArray5);
+
     // list.innerHTML = printArray5;
+
+
 })

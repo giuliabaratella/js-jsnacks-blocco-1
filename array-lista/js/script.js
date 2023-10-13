@@ -19,14 +19,16 @@ frigo.push ('pesca');
 console.log (frigo);
 
 let presente;
-for (i=0; i < frigo.length; i++){
-    if(frigo [i] = 'cocomero') {
+for (let i = 0; i < frigo.length; i++){
+    
+    if(frigo [i] === 'cocomero') {
         presente = true;
     } else {
         presente = false;
     }
 }
-if (presente) {
+
+if (presente = true) {
     console.log ("Trovato! Devo solo preparare il cocktail.")
 } else {
     console.log ("Oh no, devo uscire a comprare il cocomero!")

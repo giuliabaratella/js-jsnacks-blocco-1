@@ -7,6 +7,7 @@
 // controllare che il valore inserito sia un numero 
 // ciclo fino al valore che l'utente ha inserito 
 // dentro al ciclo array vuota in cui ad ogni giro del ciclo si aggiunge un numero casuale
+// creo un nuovo array che contenga solo gli ultimi 5 elementi dell'array principale
 
 // utility
 function getRndInteger(min, max) {
@@ -16,7 +17,7 @@ function getRndInteger(min, max) {
 
 
 const btn = document.getElementById('button');
-
+const list = document.getElementById('list');
 
 btn.addEventListener('click', function(){
     const valoreUtente = parseInt(document.getElementById('data').value) ;
@@ -26,4 +27,8 @@ btn.addEventListener('click', function(){
         array.push (getRndInteger(1,101));
     }
     console.log (array);
+
+    let printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
+    console.log (printArray5);
+    // list.innerHTML = printArray5;
 })

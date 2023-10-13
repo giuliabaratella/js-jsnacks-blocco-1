@@ -10,10 +10,18 @@
 <body>
     <div class="container p-5">
         <h1>Inserisci un numero</h1>
-        <label for="data"></label>
-        <input type="text" id="data" name="data">
+        <div class="py-3">
+            <label for="data">Quanti elementi deve contenere la lista?</label>
+            <input type="text" id="data" name="data">
+        </div>
+
+        <!-- <div class="py-3">
+            <label for="data2">Quanti elementi vuoi stampare?</label>
+            <input type="text" id="data2" name="data2">
+        </div> -->
 
         <button id="button" class="btn btn-success">Invia</button>
+        <div id="list" class="py-5"></div>
     </div>
 <script src="js/script.js"></script>
 </body>

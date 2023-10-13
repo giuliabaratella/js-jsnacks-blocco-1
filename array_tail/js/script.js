@@ -8,6 +8,12 @@
 // ciclo fino al valore che l'utente ha inserito 
 // dentro al ciclo array vuota in cui ad ogni giro del ciclo si aggiunge un numero casuale
 // creo un nuovo array che contenga solo gli ultimi 5 elementi dell'array principale
+// bonus:
+// creo una nuova lista e un nuovo ciclo che ci inserisca n valori 
+// dove n = valore input seconda casella 
+// per ogni giro del ciclo aggiugo un valore che  è uguale ad uno dei valori della prima lista, e il cui indice è (lunghezza della lista - n)
+// la variabile dovrà quindi contare a partire da n in maniera decrescente fino ad arrivare a (length-1)
+
 
 // utility
 function getRndInteger(min, max) {
@@ -34,10 +40,20 @@ btn.addEventListener('click', function(){
     } else {
         printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
     }
-    
+
     console.log (printArray5);
 
-    // list.innerHTML = printArray5;
+    const toStamp = parseInt(document.getElementById('data2').value) ;
+    const printArrayUser = []
+
+    for (let i = toStamp ; i >= 1; i--) {
+        printArrayUser.push (array[array.length - i]);
+    }
+    console.log (printArrayUser);
+
+
+
+    // list.innerHTML = printArrayUser;
 
 
 })

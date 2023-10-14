@@ -34,11 +34,15 @@ btn.addEventListener('click', function(){
     }
     console.log (array);
 
-    let printArray5;
+    let printArray5 = [];
     if (array.length <= 5){
         printArray5 = array;
     } else {
-        printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
+        for (i = 5; i >= 1; i--){
+            printArray5.push (array[array.length - i]);
+        }
+        
+        // printArray5 = [(array[array.length - 5]), (array[array.length - 4]), (array[array.length - 3]), (array[array.length - 2]), (array[array.length - 1])];
     }
 
     console.log (printArray5);
@@ -49,7 +53,15 @@ btn.addEventListener('click', function(){
     for (let i = toStamp ; i >= 1; i--) {
         printArrayUser.push (array[array.length - i]);
     }
-    console.log (printArrayUser);
+
+    if (printArrayUser.length > array.length){
+        console.log ('Errore, inserisci più elementi nella lista!')
+        list.innerHTML = 'Errore, inserisci più elementi nella lista!'
+    } else {
+        console.log (printArrayUser);
+        list.innerHTML = printArrayUser
+    }
+   
 
 
 

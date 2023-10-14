@@ -23,7 +23,19 @@ for (let i = 0; i < arrayB.length ; i++){
 }
 console.log (nIndexB);
 
-
+// controllare se il primo array è > o < del secondo 
+// ciclo: finchè la lunghezza dell'arrayA è > della lunghezza di arrayB, si aggiunge un elemento ad arrayB
+if (nIndexA > nIndexB){
+    for (i = 0; i < (nIndexA - nIndexB); i++ ){
+        arrayB.push (nIndexB + i + 1);
+    }
+    
+} else if (nIndexB > nIndexA) {
+    for (i = 0; i < (nIndexB- nIndexA); i++ ){
+        arrayA.push (nIndexA + i + 1);
+    }
+}
+console.log (arrayA, arrayB);
 
 
 
